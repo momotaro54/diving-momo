@@ -1,0 +1,17 @@
+@use 'global' as *;
+
+.swiper {
+  overflow: visible;
+}
+
+.slide-wrapper {
+  display: flex;
+  // align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  // margin-right: rem(24);
+  // justify-content: center;
+  // align-items: center;
+}

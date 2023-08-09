@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.about {
+  position: relative;
+}
+
+.about__title {
+  font-family: $font-family;
+  font-size: rem(40);
+  color: $green-accent;
+  font-weight: $normal;
+  line-height: 1;
+  @include mq(md) {
+    font-size: (80);
+    color: $white;
+    line-height: 1.25;
+  }
+}
+
+.about__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $green;
+  font-weight: $normal;
+  line-height: 1.5;
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.about__image-coral {
+  position: absolute;
+}

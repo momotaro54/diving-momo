@@ -1,0 +1,178 @@
+@use "global" as *;
+
+.contact {
+  text-align: center;
+  position: relative;
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contact__inner {
+  padding-top: rem(80);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-top: rem(151);
+    padding-bottom: rem(149);
+  }
+}
+
+.contact__pc-card {
+  @include mq(md) {
+    display: flex;
+    width: rem(1080);
+    height: rem(415);
+    padding: rem(69) rem(115) rem(91) rem(47);
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: $white;
+  }
+}
+
+.contact__logo {
+  width: rem(174);
+  height: rem(65);
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: rem(6);
+  // padding-top: rem(80);
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+    padding-bottom: rem(8);
+    // justify-content: initial;
+  }
+}
+
+.contact__logo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: rem(1);
+  background-color: $green-accent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include mq(md) {
+    width: 215%;
+    bottom: rem(-0.5);
+    transform: translateX(-28%);
+  }
+}
+
+.contact__image-fish {
+  position: absolute;
+  width: rem(109);
+  height: rem(50);
+  top: rem(60);
+  right: rem(20);
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(100);
+    right: rem(50);
+  }
+}
+
+.contact__pc-flex--left,
+.contact__pc-flex--right {
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.contact__pc-flex--right {
+  @include mq(md) {
+    position: relative;
+  }
+}
+.contact__pc-flex--right::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $green-accent;
+    position: absolute;
+    top: 0;
+    left: rem(25);
+  }
+}
+
+
+
+.contact__pc-flex--map {
+  @include mq(md) {
+    display: flex;
+    margin-top: rem(24);
+    gap: rem(21);
+  }
+}
+
+.contact__info {
+  padding: rem(16) 0;
+}
+
+.contact__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $green;
+  line-height: 1.5;
+  font-weight: $normal;
+}
+
+.contact__text:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.contact__map iframe {
+  width: rem(295);
+  height: rem(160);
+  @include mq(md) {
+    width: rem(273);
+    height: rem(148);
+  }
+}
+
+.contact__title {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(80);
+  line-height: 1;
+  font-weight: $normal;
+  text-align: center;
+  margin-top: rem(40);
+  margin-bottom: rem(8);
+  @include mq(md) {
+    margin-top: 0;
+    text-align: right;
+  }
+}
+
+.contact__title::first-letter {
+  color: $green-accent;
+}
+
+.contact__subtitle {
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  text-align: center;
+  margin-bottom: rem(8);
+}
+.contact__here {
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(14);
+  line-height: 1.28571;
+  font-weight: $normal;
+  text-align: center;
+  margin-bottom: rem(40);
+  @include mq(md) {
+    margin: rem(0);
+  }
+}

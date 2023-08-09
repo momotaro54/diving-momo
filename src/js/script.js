@@ -1,5 +1,5 @@
-
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
+  // この中であればWordpressでも「$」が使用可能になる
 
   $(function () {
     $("#js-hamburger").click(function () {
@@ -26,5 +26,4 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true, // デフォルトはfalse
     clickable: true,
   });
-
 });
