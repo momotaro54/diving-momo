@@ -1,0 +1,141 @@
+@use "global" as *;
+
+.blog {
+  position: relative;
+  @include mq(md) {
+    width: rem(1440);
+    height: rem(500);
+    background-image: url(../images/common/blog.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.blog__inner {
+  margin-left: rem(21);
+  margin-right: rem(21);
+  @include mq(md) {
+    margin-left: rem(180);
+    margin-right: rem(180);
+  }
+}
+
+.blog__section-title {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(32);
+  line-height: 1.25;
+  font-weight: $normal;
+  text-align: center;
+  padding-top: rem(80);
+
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+    color: $light-green;
+    padding-top: rem(100);
+  }
+}
+
+.blog__section-title::first-letter {
+  color: $green-accent;
+  @include mq(md) {
+    color: $light-green;
+  }
+}
+
+.blog__subtitle {
+  margin-top: rem(4);
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  text-align: center;
+  margin-bottom: rem(24);
+  @include mq(md) {
+    color: $white;
+    margin-top: rem(8);
+    margin-bottom: rem(80);
+  }
+}
+
+.blog__cards {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(40);
+    margin-bottom: rem(80);
+    z-index: 3;
+  }
+}
+
+.blog__card {
+  width: rem(333);
+  height: rem(447);
+  padding: rem(16) rem(16) rem(24) rem(16);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  background-color: $white;
+}
+
+.blog__card-title {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  position: relative;
+  padding-bottom: rem(4);
+}
+
+.blog__card-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: rem(1);
+  background-color: $green-accent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.blog__card-date {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  display: block;
+  margin-top: rem(24);
+}
+
+.blog__card-text {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  padding-top: rem(16);
+  @include mq(md) {
+    color: #000;
+  }
+}
+
+.blog__card:not(:first-child) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(40);
+  }
+}
+
+
+.blog__image-fish {
+  @include mq(md) {
+    position: absolute;
+    width: rem(376);
+    height: rem(120);
+    top: rem(24);
+    left: rem(100);
+  }
+}

@@ -1,0 +1,131 @@
+@use "global" as *;
+
+.header__inner {
+  position: fixed;
+  z-index: 3;
+  height: rem(80);
+  width: 100%;
+  background: rgba(13, 41, 54, 0.68);
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+.header__logo {
+  margin-top: rem(21);
+  margin-left: rem(15);
+  @include mq(md) {
+    margin-top: rem(20);
+    margin-left: rem(40);
+  }
+}
+
+.header__logo img {
+  width: rem(102);
+  height: rem(38);
+  @include mq(md) {
+    width: rem(133);
+    height: rem(50);
+  }
+}
+
+.header__pc-nav ul {
+  display: flex;
+}
+
+.header__pc-nav-link {
+  display: inline-block;
+  text-align: center;
+  color: $white;
+  align-items: center;
+  margin-right: rem(40);
+}
+
+.header__pc-nav-title {
+  font-size: rem(18);
+  font-family: $font-family;
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(26);
+}
+
+.header__pc-nav-subtitle {
+  font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.header__sp-nav-lists {
+  display: flex;
+  margin-top: rem(45);
+  font-family: $base-font-family;
+  color: $white;
+  line-height: 1.125;
+}
+
+.header__sp-nav-lists li {
+  // line-height: 1.125;
+  // margin-bottom: rem(24);
+  align-items: center;
+  white-space: nowrap;
+}
+
+.header__sp-nav-lists li.hitode::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  margin-right: rem(8);
+  vertical-align: middle;
+  margin-left: rem(15);
+  // margin-bottom: rem(40);
+}
+
+.small {
+  margin-bottom: rem(24);
+}
+
+.big {
+  margin-bottom: rem(40);
+}
+
+.header__sp-nav-lists ul {
+  font-weight: bold;
+  font-size: rem(16);
+}
+
+
+
+.column {
+  column-count: 2;
+}
+
+.policy {
+  margin-left: rem;
+}
+
+.font-normal {
+  font-weight: $normal;
+  margin-left: rem(40);
+  margin-top: rem(24);
+  margin-bottom: rem(24);
+}
+
+.header__sp-nav {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 100vh;
+  background-color: $green-accent;
+  transform: translateX(425px);
+  transition: 0.3s;
+}

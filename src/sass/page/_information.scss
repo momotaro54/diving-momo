@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.information__image {
+  margin-top: rem(24);
+}
+
+.information__title {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1.2;
+  margin-top: rem(24);
+  padding-bottom: rem(4);
+  position: relative;
+  @include mq(md) {
+    font-size: rem(24);
+    margin-top: rem(61);
+    padding-left: rem(48);
+    padding-bottom: rem(8);
+  }
+}
+
+.information__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: rem(1); 
+  background-color: $green-accent; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include mq(md) {
+    margin-left: rem(48);
+    width: rem(492);
+  }
+}
+
+.information__text {
+  margin-top: rem(8);
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+
+  @include mq(md) {
+    color: #000;
+    width: rem(492);
+    margin-left: rem(48);
+  }
+}
+
+.information__flex {
+  @include mq(md) {
+    display: flex;
+    margin-top: rem(40);
+    padding-bottom: rem(80);
+  }
+}

@@ -1,0 +1,127 @@
+@use "global" as *;
+
+.footer__inner {
+  height: rem(729);
+  width: 100%;
+  background-color: $green-accent;
+  @include mq(md) {
+    height: rem(559);
+  }
+}
+
+.footer__logo {
+  padding-top: rem(48);
+  padding-left: rem(15);
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-left: rem(180);
+  }
+}
+
+.footer__logo-flex {
+  @include mq(md) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.footer__logo img {
+  width: rem(120);
+  height: rem(45);
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.footer__sns {
+  display: flex;
+  margin-top: rem(16);
+}
+
+.footer__sns img {
+  margin-left: rem(15);
+  width: rem(24);
+  height: rem(24);
+  @include mq(md) {
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+.footer__sns img:first-child {
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
+.footer__sp-nav-lists {
+  // display: flex;
+  // column-count: 2;
+  margin-top: rem(45);
+  font-family: $base-font-family;
+  color: $white;
+  // width: rem(334);
+  column-count: 2;
+  // justify-content: space-between;
+  line-height: 1.125;
+  @include mq(md) {
+    padding-left: rem(180);
+    width: rem(986);
+    column-count: 4;
+  }
+}
+
+.footer__sp-nav-lists li {
+  line-height: 1.125;
+  margin-bottom: rem(24);
+  align-items: center;
+}
+
+.footer__sp-nav-lists li.hitode::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  margin-right: rem(8);
+  vertical-align: text-bottom;
+  margin-left: rem(15);
+  // margin-bottom: rem(40);
+}
+
+.footer__sp-nav-lists ul {
+  font-weight: bold;
+  font-size: rem(16);
+}
+
+.font-normal {
+  font-weight: $normal;
+  margin-left: rem(40);
+  margin-top: rem(24);
+}
+
+.font-br {
+  margin-left: rem(40);
+}
+
+
+
+
+.footer__copyright {
+  font-family: $font-family;
+  color: $white;
+  font-size: rem(12);
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: rem(40);
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.285;
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}

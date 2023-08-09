@@ -1,0 +1,161 @@
+@use "global" as *;
+
+.voice {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.voice__inner {
+  @include mq(md) {
+    margin-top: rem(471);
+    padding-top: rem(80);
+  }
+}
+
+
+
+.voice__cards {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.voice__card {
+  width: rem(345);
+  height: rem(420);
+  padding: rem(16) rem(16) rem(24) rem(16);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  @include mq(md) {
+    width: rem(520);
+    height: rem(396);
+    
+  }
+}
+
+.voice__card:first-child {
+  @include mq(md) {
+    margin-right: rem(40);
+
+  }
+}
+.voice__card:not(:first-child){
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.voice__image img {
+  width: rem(151);
+  height: rem(117);
+
+}
+
+.voice__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.voice__info {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.voice__category {
+  font-family: $base-font-family;
+  color: $green-accent;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.83333;
+  border: 1px solid $green-accent;
+  padding: rem(4) rem(12);
+  width: auto;
+  display: inline-block; 
+  text-align: center; 
+}
+
+.voice__title {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.2;
+  width: rem(149);
+  padding-top: rem(4);
+  // margin-left: rem(16);
+  // margin-right: rem(16);
+  position: relative; 
+  padding-bottom: rem(4); 
+  @include mq(md) {
+    font-size: rem(24);
+    width: rem(276);
+    padding-top: rem(8);
+  }
+}
+
+.voice__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: rem(1); 
+  background-color: $green-accent; 
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  @include mq(md) {
+  }
+}
+
+.voice__date {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  display: block;
+  margin-top: rem(24);
+}
+
+.voice__text {
+  font-family: $base-font-family;
+  color: $green;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  padding-top: rem(16);
+  @include mq(md) {
+    color: #000;
+    padding-top: rem(44);
+  }
+}
+
+.voice__button {
+  @include mq(md) {
+    margin-top: rem(60);
+    margin-bottom: rem(140);
+  }
+}
+
+.voice__image-fish {
+  // display: none;
+  @include mq(md) {
+    position: absolute;
+    width: rem(301);
+    height: rem(138);
+    top: rem(-10);
+    left: rem(-40);
+  }
+}
+.voice__image-seahorse {
+  @include mq(md) {
+    position: absolute;
+    width: rem(71);
+    height: rem(162);
+    right: 0;
+    bottom: rem(-73);
+  }
+}
