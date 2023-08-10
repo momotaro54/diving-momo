@@ -29,6 +29,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -39,9 +40,7 @@
     <header>
       <div class="header__inner">
         <div class="header__logo">
-          <a href="#">
-            <img src="assets/images/common/logo-white.png" alt=""
-          /></a>
+          <img src="assets/images/common/logo-white.png" alt="" />
         </div>
         <button
           type="button"
@@ -117,29 +116,29 @@
           </div>
           <nav class="header__sp-nav-lists">
             <ul>
-              <li class="hitode small"><a href="#">キャンペーン</a></li>
+              <li class="star small"><a href="#">キャンペーン</a></li>
               <li class="font-normal"><a href="#">ライセンス取得</a></li>
               <li class="font-normal"><a href="#">貸切体験ダイビング</a></li>
               <li class="font-normal big"><a href="#">ナイトダイビング</a></li>
-              <li class="hitode big"><a href="#">私たちについて</a></li>
-              <li class="hitode small"><a href="#">ダイビング情報</a></li>
+              <li class="star big"><a href="#">私たちについて</a></li>
+              <li class="star small"><a href="#">ダイビング情報</a></li>
               <li class="font-normal"><a href="#">ライセンス講習</a></li>
               <li class="font-normal"><a href="#">体験ダイビング</a></li>
               <li class="font-normal big"><a href="#">ファンダイビング</a></li>
-              <li class="hitode"><a href="#">ブログ</a></li>
+              <li class="star"><a href="#">ブログ</a></li>
             </ul>
             <ul>
-              <li class="hitode big"><a href="#">お客様の声</a></li>
-              <li class="hitode small"><a href="#">料金一覧</a></li>
+              <li class="star big"><a href="#">お客様の声</a></li>
+              <li class="star small"><a href="#">料金一覧</a></li>
               <li class="font-normal"><a href="#">ライセンス講習</a></li>
               <li class="font-normal"><a href="#">体験ダイビング</a></li>
               <li class="font-normal big"><a href="#">ファンダイビング</a></li>
-              <li class="hitode big"><a href="#">よくある質問</a></li>
-              <li class="hitode big">
+              <li class="star big"><a href="#">よくある質問</a></li>
+              <li class="star big">
                 <a href="#">プライバシー<br class="policy" />ポリシー</a>
               </li>
-              <li class="hitode big"><a href="#">利用規約</a></li>
-              <li class="hitode big"><a href="#">お問い合わせ</a></li>
+              <li class="star big"><a href="#">利用規約</a></li>
+              <li class="star big"><a href="#">お問い合わせ</a></li>
             </ul>
           </nav>
           <div class="drawer-background" id="js-drawer-background"></div>
@@ -149,20 +148,33 @@
 
     <div class="mv__image">
       <img class="u-mobile" src="../assets/images/common/mv-sp.jpeg" alt="" />
-      <img class="u-desktop" src="../assets/images/common/mv-pc.jpeg" alt="" />
+      <div class="slide">
+        <div class="swiper-slide">
+          <div class="fv__image01">
+            <img src="assets/images/common/fv-sp01.jpeg" alt="" />
+          </div>
+          <div class="fv__image02">
+            <img src="assets/images/common/fv-sp02.jpeg" alt="" />
+          </div>
+          <div class="fv__image03">
+            <img src="assets/images/common/fv-sp03.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
 
+      <img class="u-desktop" src="../assets/images/common/mv-pc.jpeg" alt="" />
       <div class="mv__text-overlay">
         <h1 class="mv__title">diving</h1>
         <p class="mv__subtitle">into the ocean</p>
       </div>
     </div>
 
-    <section class="campaign">
-      <div class="section__title">Campaign</div>
-      <div class="section__subtitle">キャンペーン</div>
+    <section class="campaign section__inner--campaign">
+      <div class="section__eng-title">Campaign</div>
+      <h2 class="section__title">キャンペーン</h2>
 
       <div class="swiper-container">
-        <div class="swiper">
+        <div class="js-campaign-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="slide-wrapper">
@@ -173,7 +185,7 @@
                       alt=""
                     />
                   </div>
-                  <div class="campaign__category">ライセンス講習</div>
+                  <h3 class="campaign__category">ライセンス講習</h3>
                   <div class="campaign__title">ライセンス取得</div>
                   <div class="campaign__text">全部コミコミ(お一人様)</div>
                   <div class="campaign__price--flex">
@@ -192,7 +204,7 @@
                       alt=""
                     />
                   </div>
-                  <div class="campaign__category">体験ダイビング</div>
+                  <h3 class="campaign__category">体験ダイビング</h3>
                   <div class="campaign__title">貸切体験ダイビング</div>
                   <div class="campaign__text">全部コミコミ(お一人様)</div>
                   <div class="campaign__price--flex">
@@ -211,7 +223,7 @@
                       alt=""
                     />
                   </div>
-                  <div class="campaign__category">体験ダイビング</div>
+                  <h3 class="campaign__category">体験ダイビング</h3>
                   <div class="campaign__title">ナイトダイビング</div>
                   <div class="campaign__text">全部コミコミ(お一人様)</div>
                   <div class="campaign__price--flex">
@@ -227,7 +239,7 @@
                   <div class="campaign__image">
                     <img src="assets/images/common/campaign-fun.jpeg" alt="" />
                   </div>
-                  <div class="campaign__category">ファンダイビング</div>
+                  <h3 class="campaign__category">ファンダイビング</h3>
                   <div class="campaign__title">ファンダイビング</div>
                   <div class="campaign__text">全部コミコミ(お一人様)</div>
                   <div class="campaign__price--flex">
@@ -239,24 +251,38 @@
             </div>
           </div>
         </div>
+        <div class="swiper-button-prev u-desktop">
+          <div class="swiper__button-circle">
+            <div class="swiper__button-arrow"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next u-desktop">
+          <div class="swiper__button-circle">
+            <div class="swiper__button-arrow--right"></div>
+          </div>
+        </div>
       </div>
+
+      <div class="main-button__wrapper section__sp-button">
+        <button class="main-button slide">
+          <a href="#">View more<span class="main-button-arrow"></span></a>
+        </button>
+      </div>
+
+      <button class="main-button slide">
+        <a href="#">View more<span class="button-arrow"></span></a>
+      </button>
+
       <div class="main-button__wrapper section__sp-button">
         <button class="main-button">
-          <a href="#">
-            <span>View more</span>
-            <img
-              class="main-button__arrow"
-              src="assets/images/common/button-arrow.svg"
-              alt=""
-            />
-          </a>
+          <a href="#">View more<span class="main-button-arrow"></span></a>
         </button>
       </div>
     </section>
 
     <section class="about section__inner">
-      <div class="section__title">About us</div>
-      <h2 class="section__subtitle">私たちについて</h2>
+      <div class="section__eng-title">About us</div>
+      <h2 class="section__title">私たちについて</h2>
 
       <div class="about__image-fish u-mobile">
         <img src="assets/images/common/about-fish.jpeg" alt="" />
@@ -274,14 +300,7 @@
             </div>
             <div class="main-button__wrapper section__sp-button">
               <button class="main-button">
-                <a href="#">
-                  <span>View more</span>
-                  <img
-                    class="main-button__arrow"
-                    src="assets/images/common/button-arrow.svg"
-                    alt=""
-                  />
-                </a>
+                <a href="#">View more<span class="main-button-arrow"></span></a>
               </button>
             </div>
           </div>
@@ -294,10 +313,10 @@
 
     <section class="information section__green">
       <div class="section__inner">
-        <div class="section__title">Information</div>
-        <div class="section__subtitle">ダイビング情報</div>
+        <div class="section__eng-title">Information</div>
+        <h2 class="section__title">ダイビング情報</h2>
         <div class="information__flex">
-          <div class="information__image">
+          <div class="colorbox">
             <img src="assets/images/common/information.jpeg" alt="" />
           </div>
           <div class="information__pc-info">
@@ -308,14 +327,7 @@
 
             <div class="main-button__wrapper section__sp-button">
               <button class="main-button">
-                <a href="#">
-                  <span>View more</span>
-                  <img
-                    class="main-button__arrow"
-                    src="assets/images/common/button-arrow.svg"
-                    alt=""
-                  />
-                </a>
+                <a href="#">View more<span class="main-button-arrow"></span></a>
               </button>
             </div>
           </div>
@@ -325,8 +337,8 @@
 
     <section class="blog">
       <div class="blog__inner">
-        <div class="blog__section-title">Blog</div>
-        <div class="blog__subtitle">ブログ</div>
+        <div class="blog__section-eng-title">Blog</div>
+        <h2 class="blog__title">ブログ</h2>
         <div class="blog__cards">
           <div class="blog__card">
             <a href="#">
@@ -336,7 +348,7 @@
               <time class="blog__card-date" datetime="2023-11-17"
                 >2023.11/17</time
               >
-              <div class="blog__card-title">ライセンス取得</div>
+              <h3 class="blog__card-title">ライセンス取得</h3>
               <div class="blog__card-text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
@@ -351,7 +363,7 @@
               <time class="blog__card-date" datetime="2023-11-17"
                 >2023.11/17</time
               >
-              <div class="blog__card-title">ウミガメと泳ぐ</div>
+              <h3 class="blog__card-title">ウミガメと泳ぐ</h3>
               <div class="blog__card-text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
@@ -366,7 +378,7 @@
               <time class="blog__card-date" datetime="2023-11-17"
                 >2023.11/17</time
               >
-              <div class="blog__card-title">カクレクマノミ</div>
+              <h3 class="blog__card-title">カクレクマノミ</h3>
               <div class="blog__card-text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
@@ -378,14 +390,7 @@
 
       <div class="main-button__wrapper">
         <button class="main-button">
-          <a href="#">
-            <span>View more</span>
-            <img
-              class="main-button__arrow"
-              src="assets/images/common/button-arrow.svg"
-              alt=""
-            />
-          </a>
+          <a href="#">View more<span class="main-button-arrow"></span></a>
         </button>
       </div>
       <div class="blog__image-fish u-desktop">
@@ -394,8 +399,8 @@
     </section>
 
     <section class="voice section__inner voice__inner">
-      <div class="section__title">Voice</div>
-      <h2 class="section__subtitle">お客様の声</h2>
+      <div class="section__eng-title">Voice</div>
+      <h2 class="section__title">お客様の声</h2>
       <div class="voice__cards">
         <div class="voice__card">
           <div class="voice__flex">
@@ -446,22 +451,15 @@
       </div>
       <div class="main-button__wrapper section__sp-button voice__button">
         <button class="main-button">
-          <a href="#">
-            <span>View more</span>
-            <img
-              class="main-button__arrow"
-              src="assets/images/common/button-arrow.svg"
-              alt=""
-            />
-          </a>
+          <a href="#">View more<span class="main-button-arrow"></span></a>
         </button>
       </div>
     </section>
 
     <section class="price section__green">
       <div class="section__inner">
-        <div class="section__title">Price</div>
-        <h2 class="section__subtitle">料金一覧</h2>
+        <div class="section__eng-title">Price</div>
+        <h2 class="section__title">料金一覧</h2>
         <div class="price__flex">
           <div class="price__image">
             <img
@@ -546,14 +544,7 @@
 
       <div class="main-button__wrapper price__button">
         <button class="main-button">
-          <a href="#">
-            <span>View more</span>
-            <img
-              class="main-button__arrow"
-              src="assets/images/common/button-arrow.svg"
-              alt=""
-            />
-          </a>
+          <a href="#">View more<span class="main-button-arrow"></span></a>
         </button>
       </div>
       <div class="price__pc-fish u-desktop">
@@ -595,28 +586,25 @@
             </div>
           </div>
           <div class="contact__pc-flex--right">
-            <div class="contact__title">Contact</div>
-            <div class="contact__subtitle">お問い合わせ</div>
+            <div class="contact__eng-title">Contact</div>
+            <h2 class="contact__title">お問い合わせ</h2>
             <div class="contact__here">
               ご予約・お問い合わせは<a href="#">コチラ</a>
             </div>
 
             <div class="main-button__wrapper">
               <button class="main-button">
-                <a href="#">
-                  <span>View more</span>
-                  <img
-                    class="main-button__arrow"
-                    src="assets/images/common/button-arrow.svg"
-                    alt=""
-                  />
-                </a>
+                <a href="#"
+                  >Contact us<span class="main-button-arrow"></span
+                ></a>
               </button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div id="pagetop"><a href="#top">Page Top</a></div>
 
     <footer>
       <div class="footer__inner">
@@ -633,36 +621,36 @@
             /></a>
           </div>
         </div>
-        <nav class="footer__sp-nav-lists">
+        <nav class="footer__nav-lists">
           <ul>
-            <li class="hitode"><a href="#">キャンペーン</a></li>
+            <li class="star"><a href="#">キャンペーン</a></li>
             <li class="font-normal"><a href="#">ライセンス取得</a></li>
             <li class="font-normal"><a href="#">貸切体験ダイビング</a></li>
             <li class="font-normal"><a href="#">ナイトダイビング</a></li>
-            <li class="hitode"><a href="#">私たちについて</a></li>
-            <li class="hitode"><a href="#">ダイビング情報</a></li>
+            <li class="star"><a href="#">私たちについて</a></li>
+            <li class="star"><a href="#">ダイビング情報</a></li>
             <li class="font-normal"><a href="#">ライセンス講習</a></li>
             <li class="font-normal"><a href="#">体験ダイビング</a></li>
             <li class="font-normal"><a href="#">ファンダイビング</a></li>
-            <li class="hitode"><a href="#">ブログ</a></li>
+            <li class="star"><a href="#">ブログ</a></li>
           </ul>
           <ul>
-            <li class="hitode"><a href="#">お客様の声</a></li>
-            <li class="hitode"><a href="#">料金一覧</a></li>
+            <li class="star"><a href="#">お客様の声</a></li>
+            <li class="star"><a href="#">料金一覧</a></li>
             <li class="font-normal"><a href="#">ライセンス講習</a></li>
             <li class="font-normal"><a href="#">体験ダイビング</a></li>
             <li class="font-normal"><a href="#">ファンダイビング</a></li>
-            <li class="hitode"><a href="#">よくある質問</a></li>
-            <li class="hitode">
-              <a href="#">プライバシー<br class="font-br" />ポリシー</a>
+            <li class="star"><a href="#">よくある質問</a></li>
+            <li class="star">
+              <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
             </li>
-            <li class="hitode"><a href="#">利用規約</a></li>
-            <li class="hitode"><a href="#">お問い合わせ</a></li>
+            <li class="star pc-big"><a href="#">利用規約</a></li>
+            <li class="star pc-big"><a href="#">お問い合わせ</a></li>
           </ul>
         </nav>
 
         <div class="footer__copyright">
-          Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.
+          &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.
         </div>
       </div>
     </footer>

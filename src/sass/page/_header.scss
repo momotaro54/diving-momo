@@ -17,7 +17,6 @@
   margin-top: rem(21);
   margin-left: rem(15);
   @include mq(md) {
-    margin-top: rem(20);
     margin-left: rem(40);
   }
 }
@@ -40,7 +39,8 @@
   text-align: center;
   color: $white;
   align-items: center;
-  margin-right: rem(40);
+  height: rem(90);
+  padding-right: rem(40);
 }
 
 .header__pc-nav-title {
@@ -73,7 +73,7 @@
   white-space: nowrap;
 }
 
-.header__sp-nav-lists li.hitode::before {
+.header__sp-nav-lists li.star::before {
   content: "";
   display: inline-block;
   width: rem(18);
@@ -99,14 +99,8 @@
   font-size: rem(16);
 }
 
-
-
 .column {
   column-count: 2;
-}
-
-.policy {
-  margin-left: rem;
 }
 
 .font-normal {
@@ -128,4 +122,54 @@
   background-color: $green-accent;
   transform: translateX(425px);
   transition: 0.3s;
+}
+
+@media screen and (min-width: 426px) {
+  .header__sp-nav {
+    display: none;
+  }
+}
+
+
+.header__pc-nav li a,
+.header__sp-nav-lists li a {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+
+.header__pc-nav li.current a,
+.header__pc-nav li a:hover {
+  color: $green-accent;
+}
+.header__sp-nav-lists li.current a,
+.header__sp-nav-lists li a:hover {
+  color:  $green-accent;
+}
+
+.header__pc-nav li a::after,
+.header__pc-nav-lists li a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: rem(15);
+  left: -6%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background:  $green-accent;
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: center top; /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.header__pc-nav li.current a::after,
+.header__pc-nav li a:hover::after {
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.header__sp-nav-lists li.current a::after,
+.header__sp-nav-lists li a:hover::after {
+  transform: scale(1, 1); /*X方向にスケール拡大*/
 }

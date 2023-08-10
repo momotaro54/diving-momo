@@ -15,6 +15,7 @@
   @include mq(md) {
     padding-top: rem(80);
     padding-left: rem(180);
+    margin-right: rem(35);
   }
 }
 
@@ -49,36 +50,39 @@
   }
 }
 
-.footer__sns img:first-child {
-  @include mq(md) {
-    margin-left: rem(40);
-  }
-}
-
-.footer__sp-nav-lists {
+.footer__nav-lists {
   // display: flex;
-  // column-count: 2;
   margin-top: rem(45);
   font-family: $base-font-family;
   color: $white;
   // width: rem(334);
   column-count: 2;
+  column-gap: rem(40);
   // justify-content: space-between;
   line-height: 1.125;
   @include mq(md) {
     padding-left: rem(180);
+    padding-right: rem(180);
     width: rem(986);
+    width: 100%;
     column-count: 4;
+    column-gap: rem(80);
+    text-align: left;
+    align-items: stretch;
   }
 }
 
-.footer__sp-nav-lists li {
+.footer__nav-lists li {
+  display: inline-block;
+  width: 100%;
   line-height: 1.125;
   margin-bottom: rem(24);
+  display: flex;
   align-items: center;
+  height: 100%; /* 要素の高さを100%に設定 */
 }
 
-.footer__sp-nav-lists li.hitode::before {
+.footer__nav-lists li.star::before {
   content: "";
   display: inline-block;
   width: rem(18);
@@ -88,10 +92,9 @@
   margin-right: rem(8);
   vertical-align: text-bottom;
   margin-left: rem(15);
-  // margin-bottom: rem(40);
 }
 
-.footer__sp-nav-lists ul {
+.footer__nav-lists ul {
   font-weight: bold;
   font-size: rem(16);
 }
@@ -102,12 +105,15 @@
   margin-top: rem(24);
 }
 
+.pc-big {
+  @include mq(md) {
+    padding-top: rem(8);
+  }
+}
+
 .font-br {
   margin-left: rem(40);
 }
-
-
-
 
 .footer__copyright {
   font-family: $font-family;

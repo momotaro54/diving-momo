@@ -20,7 +20,7 @@
   }
 }
 
-.blog__section-title {
+.blog__section-eng-title {
   font-family: $font-family;
   color: $green;
   font-size: rem(32);
@@ -37,14 +37,14 @@
   }
 }
 
-.blog__section-title::first-letter {
+.blog__section-eng-title::first-letter {
   color: $green-accent;
   @include mq(md) {
     color: $light-green;
   }
 }
 
-.blog__subtitle {
+.blog__title {
   margin-top: rem(4);
   font-family: $base-font-family;
   color: $green-accent;

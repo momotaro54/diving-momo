@@ -1,0 +1,68 @@
+@use 'global' as *;
+
+
+/* スライダー全体 */
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* スライダー画像 */
+.slider .image{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*
+  ①スライド画像
+  表示する画像を定義
+*/
+.slider .image:nth-of-type(1){
+  background-image: url(../images/common/fv-pc01.jpeg);
+}
+.slider .image:nth-of-type(2){
+  animation-delay: 5s;
+  background-image: url(../images/common/fv-pc02.jpeg);
+}
+.slider .image:nth-of-type(3){
+  animation-delay: 10s;
+  background-image: url(../images/common/fv-pc03.jpeg);
+}
+
+/*
+  ②アニメーション設定
+  animation-durationのみ変更
+*/
+.slider .image{
+  animation-name: anime;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;  /* ①で設定したanimation-delayを合計を挿入 */
+}
+
+/* アニメーション定義 */
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}

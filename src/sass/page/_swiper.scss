@@ -1,17 +1,59 @@
-@use 'global' as *;
-
-.swiper {
-  overflow: visible;
-}
+@use "global" as *;
 
 .slide-wrapper {
-  display: flex;
-  // align-items: center;
+  padding: rem(2);
 }
 
-.swiper-slide {
+.swiper__button-circle {
+  width: rem(80);
+  height: rem(80);
+  background-color: $white;
+  border-radius: 50%;
+  border: 1px solid $green-accent;
   display: flex;
-  // margin-right: rem(24);
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper__button-arrow {
+  width: rem(40);
+  height: rem(5);
+  border-bottom: 1px solid $green-accent;
+  border-left: 1px solid $green-accent;
+  transform: skew(-45deg);
+}
+
+.swiper__button-arrow--right {
+  width: rem(40);
+  height: rem(5);
+  border-bottom: 1px solid $green-accent;
+  border-right: 1px solid $green-accent;
+  transform: skew(45deg);
+}
+.swiper-container {
+  margin-inline: auto;
+  position: relative;
+}
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.swiper-container [class^="swiper-button-"]::after {
+  content: "";
+}
+
+.swiper-container [class^="swiper-button-"] {
+  width: rem(80);
+  height: rem(80);
+}
+
+.swiper-container .swiper-button-prev {
+  top: rem(-75);
+  left: rem(740);
+}
+.swiper-container .swiper-button-next {
+  top: rem(-75);
+  right: rem(70);
 }
