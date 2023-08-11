@@ -21,7 +21,18 @@ jQuery(function ($) {
     });
   });
 
-  const swiper = new Swiper(".js-campaign-swiper", {
+  const fvSwiper = new Swiper(".js-fv-swiper", {
+    loop: true,
+    slidesPerView: "1",
+    speed: 4000,
+
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+
+  const campaignSwiper = new Swiper(".js-campaign-swiper", {
     loop: true,
     spaceBetween: 24,
     slidesPerView: "1",
@@ -52,37 +63,16 @@ jQuery(function ($) {
     },
   });
 
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    speed: 800,
-    grabCursor: true,
-    spaceBetween: 30,
-    breakpoints: {
-      0: {
-        slidesPerView: 1.2,
-      },
-      700: {
-        slidesPerView: "auto",
-      },
-    },
-  });
-
   var box = $(".colorbox"),
     speed = 700;
 
   box.each(function () {
     $(this).append('<div class="color"></div>');
-    var color = $(this).find(".color"),
+    var color = $(this).find($(".color")),
       image = $(this).find("img");
     var counter = 0;
-
     image.css("opacity", "0");
     color.css("width", "0%");
-
     color.on("inview", function () {
       if (counter == 0) {
         $(this)

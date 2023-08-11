@@ -9,6 +9,12 @@
   }
 }
 
+.footer__logo-flex {
+  @include mq(md) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
 .footer__logo {
   padding-top: rem(48);
   padding-left: rem(15);
@@ -16,13 +22,6 @@
     padding-top: rem(80);
     padding-left: rem(180);
     margin-right: rem(35);
-  }
-}
-
-.footer__logo-flex {
-  @include mq(md) {
-    display: flex;
-    align-items: flex-end;
   }
 }
 
@@ -37,7 +36,7 @@
 
 .footer__sns {
   display: flex;
-  margin-top: rem(16);
+  padding-top: rem(16);
 }
 
 .footer__sns img {
@@ -51,14 +50,11 @@
 }
 
 .footer__nav-lists {
-  // display: flex;
-  margin-top: rem(45);
+  margin-top: rem(24);
   font-family: $base-font-family;
   color: $white;
-  // width: rem(334);
   column-count: 2;
-  column-gap: rem(40);
-  // justify-content: space-between;
+  // column-gap: rem(40);
   line-height: 1.125;
   @include mq(md) {
     padding-left: rem(180);
@@ -66,10 +62,20 @@
     width: rem(986);
     width: 100%;
     column-count: 4;
-    column-gap: rem(80);
-    text-align: left;
-    align-items: stretch;
+    // column-gap: rem(80);
+    // text-align: center;
+    // align-items: stretch;
   }
+}
+
+.footer__nav-lists ul {
+  font-weight: bold;
+  font-size: rem(16);
+
+}
+
+.footer__nav-lists li:hover {
+  opacity: 0.8;
 }
 
 .footer__nav-lists li {
@@ -80,6 +86,9 @@
   display: flex;
   align-items: center;
   height: 100%; /* 要素の高さを100%に設定 */
+  @include mq(md) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__nav-lists li.star::before {
@@ -94,36 +103,38 @@
   margin-left: rem(15);
 }
 
-.footer__nav-lists ul {
-  font-weight: bold;
-  font-size: rem(16);
-}
+
 
 .font-normal {
   font-weight: $normal;
   margin-left: rem(40);
   margin-top: rem(24);
-}
-
-.pc-big {
   @include mq(md) {
-    padding-top: rem(8);
+    // margin-left: 0;
+    margin-top: 0;
   }
 }
 
-.font-br {
-  margin-left: rem(40);
+.large {
+  @include mq(md) {
+    padding-top: rem(40);
+  }
+}
+
+.short {
+  @include mq(md) {
+    padding-top: rem(12);
+  }
 }
 
 .footer__copyright {
   font-family: $font-family;
   color: $white;
   font-size: rem(12);
-  font-weight: normal;
+  font-weight: $normal;
   line-height: 1.5;
   text-align: center;
   padding-top: rem(40);
-
   @include mq(md) {
     font-size: rem(14);
     line-height: 1.285;

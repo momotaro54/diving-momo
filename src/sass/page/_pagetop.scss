@@ -1,46 +1,64 @@
-@use 'global' as *;
+@use "global" as *;
 
 #pagetop {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  left: rem(8);
+  bottom: rem(740);
   text-indent: -9999px;
   margin: 0;
-}
-#pagetop a {
-  position: relative;
-  display: block;
-  width: 65px;
-  height: 65px;
-  background: rgba(0,0,0,1);
-  transition: opacity .6s ease;
+  @include mq(md) {
+    left: rem(12);
+    bottom: rem(610);
+  }
 }
 #pagetop a:hover {
-  opacity: .3;
+  opacity: 0.8;
 }
-#pagetop a::before {
-  position: absolute;
-  top: 7px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 14px;
-  height: 14px;
-  margin: auto;
-  content: '';
-  transform: rotate(-45deg);
-  border-top: 1px solid #FFF;
-  border-right: 1px solid #FFF;
-}
-@media screen and (max-width:767px) {
+
 #pagetop a {
-  width: 45px;
-  height: 45px;
+  width: rem(48);
+  height: rem(48);
+  background-color: $white;
+  border-radius: 50%;
+  border: 1px solid $green-accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+  }
 }
 #pagetop a::before {
-  top: 5px;
-  width: 10px;
-  height: 10px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: $green-accent;
+  top: 12px;
+  left: 25px;
+  width: 1px;
+  height: 27px;
+  @include mq(md) {
+    left: 38px;
+    width: 1px;
+    height: 50px;
+  }
 }
+#pagetop a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid;
+  border-color: transparent transparent $green-accent transparent;
+  transform: rotate(135deg);
+  top: 16px;
+  left: 19px;
+  width: 8px;
+  height: 3px;
+  @include mq(md) {
+    left: 30px;
+    width: 13px;
+    height: 6px;
+  }
 }

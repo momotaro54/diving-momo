@@ -8,64 +8,21 @@
     background-image: url(../images/common/blog.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
-  }
-}
-
-.blog__inner {
-  margin-left: rem(21);
-  margin-right: rem(21);
-  @include mq(md) {
-    margin-left: rem(180);
-    margin-right: rem(180);
-  }
-}
-
-.blog__section-eng-title {
-  font-family: $font-family;
-  color: $green;
-  font-size: rem(32);
-  line-height: 1.25;
-  font-weight: $normal;
-  text-align: center;
-  padding-top: rem(80);
-
-  @include mq(md) {
-    font-size: rem(40);
-    line-height: 1;
-    color: $light-green;
     padding-top: rem(100);
   }
 }
 
-.blog__section-eng-title::first-letter {
-  color: $green-accent;
-  @include mq(md) {
-    color: $light-green;
-  }
-}
-
-.blog__title {
-  margin-top: rem(4);
-  font-family: $base-font-family;
-  color: $green-accent;
-  font-size: rem(12);
-  line-height: 1.5;
-  font-weight: $normal;
-  text-align: center;
-  margin-bottom: rem(24);
-  @include mq(md) {
-    color: $white;
-    margin-top: rem(8);
-    margin-bottom: rem(80);
-  }
-}
-
 .blog__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include mq(md) {
     display: flex;
-    justify-content: space-between;
-    margin-top: rem(40);
-    margin-bottom: rem(80);
+    flex-direction: row;
+    justify-content: center;
+    padding-top: rem(80);
+    padding-bottom: rem(40);
     z-index: 3;
   }
 }
@@ -76,6 +33,21 @@
   padding: rem(16) rem(16) rem(24) rem(16);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   background-color: $white;
+  transition: background-color 0.3s;
+}
+
+.blog__card:hover {
+  background-color: rgba(221, 240, 241, 0.8);
+}
+
+.blog__card-date {
+  font-family: $font-family;
+  color: $green;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  display: block;
+  padding-top: rem(24);
 }
 
 .blog__card-title {
@@ -99,16 +71,6 @@
   left: 0;
 }
 
-.blog__card-date {
-  font-family: $font-family;
-  color: $green;
-  font-size: rem(12);
-  line-height: 1.5;
-  font-weight: $normal;
-  display: block;
-  margin-top: rem(24);
-}
-
 .blog__card-text {
   font-family: $base-font-family;
   color: $green;
@@ -128,7 +90,6 @@
     margin-left: rem(40);
   }
 }
-
 
 .blog__image-fish {
   @include mq(md) {

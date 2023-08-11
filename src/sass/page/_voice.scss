@@ -13,11 +13,14 @@
   }
 }
 
-
-
 .voice__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @include mq(md) {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -29,33 +32,31 @@
   @include mq(md) {
     width: rem(520);
     height: rem(396);
-    
   }
 }
 
 .voice__card:first-child {
   @include mq(md) {
     margin-right: rem(40);
-
   }
 }
-.voice__card:not(:first-child){
+.voice__card:not(:first-child) {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: 0;
   }
 }
-
-.voice__image img {
-  width: rem(151);
-  height: rem(117);
-
-}
-
 .voice__flex {
   display: flex;
   justify-content: space-between;
 }
+
+// .voice__first-line {
+//   @include mq(md) {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
 
 .voice__info {
   font-family: $base-font-family;
@@ -74,8 +75,8 @@
   border: 1px solid $green-accent;
   padding: rem(4) rem(12);
   width: auto;
-  display: inline-block; 
-  text-align: center; 
+  display: inline-block;
+  text-align: center;
 }
 
 .voice__title {
@@ -86,10 +87,8 @@
   line-height: 1.2;
   width: rem(149);
   padding-top: rem(4);
-  // margin-left: rem(16);
-  // margin-right: rem(16);
-  position: relative; 
-  padding-bottom: rem(4); 
+  position: relative;
+  padding-bottom: rem(4);
   @include mq(md) {
     font-size: rem(24);
     width: rem(276);
@@ -101,23 +100,18 @@
   content: "";
   display: block;
   width: 100%;
-  height: rem(1); 
-  background-color: $green-accent; 
+  height: rem(1);
+  background-color: $green-accent;
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
   @include mq(md) {
   }
 }
 
-.voice__date {
-  font-family: $font-family;
-  color: $green;
-  font-size: rem(12);
-  line-height: 1.5;
-  font-weight: $normal;
-  display: block;
-  margin-top: rem(24);
+.voice__image img {
+  width: rem(151);
+  height: rem(117);
 }
 
 .voice__text {
@@ -141,7 +135,6 @@
 }
 
 .voice__image-fish {
-  // display: none;
   @include mq(md) {
     position: absolute;
     width: rem(301);

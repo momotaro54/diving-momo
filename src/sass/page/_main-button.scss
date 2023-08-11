@@ -1,11 +1,12 @@
 @use "global" as *;
 
 .main-button__wrapper {
-  padding-top: rem(40);
   text-align: center;
+  padding-top: rem(40);
 }
 
 .main-button {
+  position: relative;
   display: inline-block;
   width: rem(202);
   height: rem(54);
@@ -16,13 +17,12 @@
   font-size: rem(14);
   line-height: 1.5714;
   padding: rem(16) rem(40);
-  position: relative;
-  margin: rem(5) 0 rem(5);
 }
 
 .main-button a {
   display: flex;
   align-items: center;
+  // color: inherit;
 }
 
 .main-button-arrow {
@@ -34,24 +34,26 @@
   margin-left: rem(4);
 }
 
-.main-button::before {
+.main-button::after {
   content: "";
   position: absolute;
   border: solid 1px #408f95;
-  top: 0;
-  left: 0;
-  right: -3px;
-  bottom: -3px;
+  top: 3px;
+  left: 3px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
 }
 
 .main-button.slide {
-  background: #fff;
-  color: $green-accent;
-  overflow: hidden;
   position: relative;
   z-index: 1;
 }
-.main-button.slide::after {
+.main-button-arrow.slide {
+  position: relative;
+  z-index: 1;
+}
+.main-button.slide::before {
   background: $green-accent;
   position: absolute;
   top: 0;
@@ -64,38 +66,35 @@
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
+// .main-button:hover {
+//   background: $green-accent;
+//   color: #fff;
+//   transform: scale(0, 1);
+//   transform-origin: left top;
+//   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+//   z-index: -1;
+//   transform: scale(1, 1);
+// }
+
+// .main-button-arrow:hover {
+//   border-bottom: 1px solid $white;
+//   border-right: 1px solid $white;
+// }
+
 .main-button.slide:hover {
   color: #fff;
 }
-.main-button.slide:hover::after {
+// .main-button-arrow.slide:hover {
+//   border-bottom: 1px solid $white;
+//   border-right: 1px solid $white;
+// }
+.main-button.slide:hover::before {
+  transform: scale(1, 1);
+}
+.main-button-arrow.slide:hover::before {
   transform: scale(1, 1);
 }
 
-.main-button-arrow:hover {
-  color: #fff;
-}
-
-.button-arrow {
-  display: inline-block;
-  position: relative;
-  padding-right: rem(8);
-  padding-left: rem(4);
-}
-
-.button-arrow::after {
-  content: "";
-  width: rem(40);
-  height: 5px;
-  border-bottom: 1px solid $green-accent;
-  border-right: 1px solid $green-accent;
-  position: absolute;
-  top: 50%;
-  right: rem(-40);
-  transform: skew(45deg) translateY(-50%);
-}
-
-
-
-.button-arrow:hover {
-  color: #fff; /* ホバー時の矢印の色 */
+.main-button-arrow.slide:hover {
+  color: red;
 }

@@ -5,26 +5,39 @@
 }
 
 .about__image-fish {
+  padding-top: rem(16);
   width: rem(281);
   height: rem(186);
+  margin-left: auto;
 }
 
 .about__image-roof {
   position: absolute;
   width: rem(128);
   height: rem(194);
-  top: rem(50);
-  left: 0;
+  top: rem(155);
+  left: rem(65);
   @include mq(md) {
     z-index: 2;
     width: rem(399);
     height: rem(606);
-    top: rem(120);
-    left: rem(-200);
+    top: rem(200);
+    left: rem(220);
   }
+
 }
 
 .about__pc {
+  padding-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+    margin-left: rem(380);
+    margin-right: rem(180);
+    margin-bottom: rem(140);
+  }
+}
+
+.about__pc-image {
   @include mq(md) {
     position: relative;
     width: rem(880);
@@ -33,7 +46,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: rem(120);
-    margin-right: rem(180);
   }
 }
 .about__pc-flex {
@@ -62,6 +74,7 @@
   color: $green;
   font-weight: $normal;
   line-height: 1.5;
+  padding-top: rem(16);
   @include mq(md) {
     color: $white;
     width: rem(400);
@@ -73,7 +86,7 @@
   position: absolute;
   width: rem(194);
   height: rem(181);
-  right: rem(-100);
+  right: rem(90);
   bottom: rem(0);
   
 }

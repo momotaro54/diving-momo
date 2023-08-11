@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .price {
+  padding-bottom: rem(80);
   @include mq(md) {
     position: relative;
   }
@@ -10,12 +11,15 @@
   @include mq(md) {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: rem(40);
   }
 }
 
 .price__pc-image {
+  margin-left: rem(90);
+}
+.price__pc-image img {
   width: rem(492);
   height: rem(746);
 }
@@ -24,11 +28,6 @@
   @include mq(md) {
     width: rem(492);
   }
-}
-
-.price__item {
-  display: flex;
-  justify-content: space-between;
 }
 
 .price__title {
@@ -59,6 +58,11 @@
   left: 0;
 }
 
+.price__item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .price__name,
 .price__price {
   font-family: $base-font-family;
@@ -70,10 +74,6 @@
   @include mq(md) {
     font-size: rem(16);
   }
-}
-
-.price__button {
-  padding-bottom: rem(100);
 }
 
 .price__pc-fish {
