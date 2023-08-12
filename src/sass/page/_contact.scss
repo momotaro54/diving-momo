@@ -41,7 +41,6 @@
   @include mq(md) {
     width: rem(200);
     height: rem(75);
-    padding-bottom: rem(8);
   }
 }
 
@@ -56,7 +55,7 @@
   bottom: 0;
   @include mq(md) {
     width: 215%;
-    bottom: rem(-0.5);
+    bottom: rem(-14);
     transform: translateX(-28%);
   }
 }
@@ -70,7 +69,7 @@
   @include mq(md) {
     width: rem(301);
     height: rem(138);
-    top: rem(100);
+    top: rem(104);
     right: rem(50);
   }
 }
@@ -96,7 +95,7 @@
     background-color: $green-accent;
     position: absolute;
     top: 0;
-    left: rem(25);
+    left: rem(32);
   }
 }
 
@@ -105,16 +104,20 @@
   @include mq(md) {
     display: flex;
     justify-content: center;
-    padding-top: rem(24);
+    margin-top: rem(32);
     gap: rem(21);
   }
 }
 
 .contact__info {
   padding: rem(16) 0;
+  @include mq(md) {
+    padding: 0;
+  }
 }
 
 .contact__text {
+  text-align: left;
   font-family: $base-font-family;
   font-size: rem(16);
   color: $green;
@@ -122,8 +125,8 @@
   font-weight: $normal;
 }
 
-.contact__text:not(:first-child) {
-  padding-top: rem(4);
+.contact__text p:not(:first-child) {
+  margin-top: rem(5);
 }
 
 .contact__map iframe {

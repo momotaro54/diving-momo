@@ -4,6 +4,8 @@
   padding-bottom: rem(80);
   @include mq(md) {
     position: relative;
+    margin-top: rem(142);
+    padding-bottom: rem(100);
   }
 }
 
@@ -12,7 +14,6 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    margin-bottom: rem(40);
   }
 }
 
@@ -73,6 +74,7 @@
   padding-top: rem(8);
   @include mq(md) {
     font-size: rem(16);
+    line-height: 1.5;
   }
 }
 
@@ -80,6 +82,6 @@
   position: absolute;
   width: rem(437);
   height: rem(201);
-  left: rem(90);
-  bottom: rem(60);
+  left: rem(96);
+  bottom: rem(56);
 }

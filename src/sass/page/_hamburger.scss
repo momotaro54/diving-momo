@@ -3,17 +3,19 @@
 $color01: #408f95;
 $color02: #fff;
 
-
 .hamburger {
   position: fixed;
   top: 16px;
-  right: 20px;
+  left: 328px;
   z-index: 5;
   width: 48px;
   height: 48px;
   outline: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .hamburger__line {
@@ -41,11 +43,11 @@ $color02: #fff;
   }
 }
 
-
 .drawer-background {
   position: fixed;
   z-index: 4;
-  width: 100vw;
+  width: 100%;
+  // max-width: rem(425);
   top: 0;
   right: 0;
   bottom: 0;
@@ -56,6 +58,12 @@ $color02: #fff;
   visibility: hidden;
   opacity: 1;
 }
+
+// @media screen and (min-width: 426px) {
+//   .drawer-background {
+//     display: none;
+//   }
+// }
 
 .is-drawerActive {
   .header__sp-nav {

@@ -1,5 +1,11 @@
 @use "global" as *;
 
+.information {
+  @include mq(md) {
+    padding-bottom: rem(81.2);
+  }
+}
+
 .information__image {
   @include mq(md) {
     width: rem(540);
@@ -26,6 +32,7 @@
   position: relative;
   @include mq(md) {
     font-size: rem(24);
+    padding-top: rem(0);
     padding-bottom: rem(8);
   }
 }

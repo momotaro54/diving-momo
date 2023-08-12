@@ -9,7 +9,7 @@
 .voice__inner {
   @include mq(md) {
     margin-top: rem(471);
-    padding-top: rem(80);
+    // padding-top: rem(80);
   }
 }
 
@@ -32,6 +32,8 @@
   @include mq(md) {
     width: rem(520);
     height: rem(396);
+    padding: rem(24);
+
   }
 }
 
@@ -51,12 +53,14 @@
   justify-content: space-between;
 }
 
-// .voice__first-line {
-//   @include mq(md) {
-//     display: flex;
-//     justify-content: space-between;
-//   }
-// }
+.voice__first-line {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(24);
+    align-items: flex-end;
+  }
+}
 
 .voice__info {
   font-family: $base-font-family;
@@ -91,6 +95,7 @@
   padding-bottom: rem(4);
   @include mq(md) {
     font-size: rem(24);
+    line-height: 1.5;
     width: rem(276);
     padding-top: rem(8);
   }
@@ -112,6 +117,10 @@
 .voice__image img {
   width: rem(151);
   height: rem(117);
+  @include mq(md) {
+    width: rem(180);
+    height: rem(140);
+  }
 }
 
 .voice__text {
@@ -123,7 +132,7 @@
   padding-top: rem(16);
   @include mq(md) {
     color: #000;
-    padding-top: rem(44);
+    padding-top: rem(40);
   }
 }
 
@@ -139,8 +148,8 @@
     position: absolute;
     width: rem(301);
     height: rem(138);
-    top: rem(-10);
-    left: rem(-40);
+    top: rem(-120);
+    left: rem(98);
   }
 }
 .voice__image-seahorse {
@@ -148,7 +157,7 @@
     position: absolute;
     width: rem(71);
     height: rem(162);
-    right: 0;
+    right: rem(180);
     bottom: rem(-73);
   }
 }

@@ -1,6 +1,11 @@
 @use "global" as *;
 
+。.swiper-container {
+  width: 100%;
+}
+
 .slide-wrapper {
+  transition-timing-function: linear;
   padding: rem(2);
 }
 
@@ -30,9 +35,14 @@
   border-right: 1px solid $green-accent;
   transform: skew(45deg);
 }
+
 .swiper-container {
   margin-inline: auto;
   position: relative;
+}
+.swiper-slide {
+  width: 100%;
+  max-width: 100%;
 }
 
 .swiper-slide img {
@@ -50,10 +60,10 @@
 }
 
 .swiper-container .swiper-button-prev {
-  top: rem(-75);
-  left: rem(960);
+  top: rem(-82);
+  left: rem(995);
 }
 .swiper-container .swiper-button-next {
-  top: rem(-75);
-  right: rem(220);
+  top: rem(-85);
+  right: rem(156);
 }

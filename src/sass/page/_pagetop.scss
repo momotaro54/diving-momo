@@ -2,12 +2,12 @@
 
 #pagetop {
   position: fixed;
-  left: rem(8);
+  right: rem(50);
   bottom: rem(740);
   text-indent: -9999px;
   margin: 0;
   @include mq(md) {
-    left: rem(12);
+    right: rem(50);
     bottom: rem(610);
   }
 }

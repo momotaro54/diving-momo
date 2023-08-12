@@ -33,7 +33,7 @@ jQuery(function ($) {
   });
 
   const campaignSwiper = new Swiper(".js-campaign-swiper", {
-    loop: true,
+    loop: false,
     spaceBetween: 24,
     slidesPerView: "1",
     speed: 3000,
