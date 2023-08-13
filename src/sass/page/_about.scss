@@ -7,8 +7,15 @@
   }
 }
 
+.about__images {
+  padding-top: rem(35);
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+
 .about__image-fish {
-  padding-top: rem(16);
+  // padding-top: rem(16);
   width: rem(281);
   height: rem(186);
   margin-left: auto;
@@ -18,8 +25,8 @@
   position: absolute;
   width: rem(128);
   height: rem(194);
-  top: rem(155);
-  left: rem(65);
+  top: rem(175);
+  left: rem(15);
   @include mq(md) {
     z-index: 2;
     width: rem(399);

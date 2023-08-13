@@ -48,7 +48,7 @@
           type="button"
           id="js-hamburger"
           class="hamburger-button hamburger"
-          aria-controls="js-glabal-menu"
+          aria-controls="js-global-menu"
           aria-expanded="false"
           aria-label="メニューを開閉する"
         >
@@ -58,50 +58,50 @@
           <ul>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">Campaign</div>
-                <span class="header__pc-nav-subtitle">キャンペーン</span>
+                <div class="header__pc-nav-eng-title">Campaign</div>
+                <span class="header__pc-nav-title">キャンペーン</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">About us</div>
-                <span class="header__pc-nav-subtitle">私たちについて</span>
+                <div class="header__pc-nav-eng-title">About us</div>
+                <span class="header__pc-nav-title">私たちについて</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">Information</div>
-                <span class="header__pc-nav-subtitle">ダイビング情報</span>
+                <div class="header__pc-nav-eng-title">Information</div>
+                <span class="header__pc-nav-title">ダイビング情報</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">Blog</div>
-                <span class="header__pc-nav-subtitle">ブログ</span>
+                <div class="header__pc-nav-eng-title">Blog</div>
+                <span class="header__pc-nav-title">ブログ</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">Voice</div>
-                <span class="header__pc-nav-subtitle">お客様の声</span>
+                <div class="header__pc-nav-eng-title">Voice</div>
+                <span class="header__pc-nav-title">お客様の声</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">Price</div>
-                <span class="header__pc-nav-subtitle">料金一覧</span>
+                <div class="header__pc-nav-eng-title">Price</div>
+                <span class="header__pc-nav-title">料金一覧</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">FAQ</div>
-                <span class="header__pc-nav-subtitle">よくある質問</span>
+                <div class="header__pc-nav-eng-title">FAQ</div>
+                <span class="header__pc-nav-title">よくある質問</span>
               </a>
             </li>
             <li>
               <a href="#" class="header__pc-nav-link">
-                <div class="header__pc-nav-title">Contact</div>
-                <span class="header__pc-nav-subtitle">お問い合わせ</span>
+                <div class="header__pc-nav-eng-title">Contact</div>
+                <span class="header__pc-nav-title">お問い合わせ</span>
               </a>
             </li>
           </ul>
@@ -139,7 +139,6 @@
           </nav>
           <div class="drawer-background" id="js-drawer-background"></div>
         </div>
-       
       </div>
     </header>
 
@@ -152,19 +151,26 @@
         <div class="js-fv-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="assets/images/common/mv-sp.jpeg" alt="" />
+              <div class="mv__image">
+                <img src="assets/images/common/mv-sp.jpeg" alt="" />
+              </div>
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/common/fv-sp01.jpeg" alt="" />
+              <div class="fv__image">
+                <img src="assets/images/common/fv-sp01.jpeg" alt="" />
+              </div>
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/images/common/fv-sp02.jpeg" alt="" />
+              <div class="fv__image">
+                <img src="assets/images/common/fv-sp02.jpeg" alt="" />
+              </div>
             </div>
-
             <div class="swiper-slide">
-              <img src="assets/images/common/fv-sp03.jpeg" alt="" />
+              <div class="fv__image">
+                <img src="assets/images/common/fv-sp03.jpeg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -356,7 +362,7 @@
         </div>
       </div>
 
-      <div class="main-button__wrapper section__sp-button">
+      <div class="main-button__wrapper">
         <button class="main-button">
           <a href="#">View more</a>
         </button>
@@ -366,12 +372,13 @@
     <section class="about section__inner section__inner-top">
       <div class="section__eng-title">About us</div>
       <h2 class="section__title">私たちについて</h2>
-
-      <div class="about__image-fish u-mobile">
-        <img src="assets/images/common/about-fish.jpeg" alt="" />
-      </div>
-      <div class="about__image-roof">
-        <img src="assets/images/common/about-roof.jpg" alt="" />
+      <div class="about__images">
+        <div class="about__image-fish u-mobile">
+          <img src="assets/images/common/about-fish.jpeg" alt="" />
+        </div>
+        <div class="about__image-roof">
+          <img src="assets/images/common/about-roof.jpg" alt="" />
+        </div>
       </div>
       <div class="about__pc">
         <div class="about__pc-image">
@@ -382,9 +389,10 @@
             <div class="about__pc-flex--right">
               <div class="about__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                <!-- が入ります。 -->
               </div>
-              <div class="main-button__wrapper--top section__sp-button">
+              <div class="main-button__wrapper--top main-button__wrapper-sp">
                 <button class="main-button">
                   <a href="#">View more</a>
                 </button>
@@ -404,7 +412,7 @@
       <div class="section__eng-title">Information</div>
       <h2 class="section__title">ダイビング情報</h2>
       <div class="information__flex">
-        <div class="information__image olorbox">
+        <div class="information__image colorbox">
           <img src="assets/images/common/information.jpeg" alt="" />
         </div>
         <div class="information__pc-info">
@@ -413,7 +421,7 @@
             当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
           </div>
 
-          <div class="main-button__wrapper--top section__sp-button">
+          <div class="main-button__wrapper--top main-button__wrapper-sp">
             <button class="main-button">
               <a href="#">View more</a>
             </button>
@@ -472,7 +480,7 @@
           </a>
         </div>
       </div>
-      <div class="main-button__wrapper section__sp-button">
+      <div class="main-button__wrapper main-button__wrapper-sp">
         <button class="main-button">
           <a href="#">View more</a>
         </button>
@@ -538,7 +546,7 @@
       <div class="voice__image-seahorse u-desktop">
         <img src="assets/images/common/voice-pc-seahorse.png" alt="" />
       </div>
-      <div class="main-button__wrapper section__sp-button">
+      <div class="main-button__wrapper main-button__wrapper-sp">
         <button class="main-button">
           <a href="#">View more</a>
         </button>
@@ -625,7 +633,7 @@
           </div>
         </dl>
       </div>
-      <div class="main-button__wrapper section__sp-button">
+      <div class="main-button__wrapper main-button__wrapper-sp">
         <button class="main-button">
           <a href="#">View more</a>
         </button>
@@ -706,16 +714,14 @@
           <ul>
             <li class="star"><a href="#">キャンペーン</a></li>
             <li class="font-normal short"><a href="#">ライセンス取得</a></li>
-            <li class="font-normal short">
-              <a href="#">貸切体験ダイビング</a>
-            </li>
+            <li class="font-normal short"><a href="#">貸切体験ダイビング</a></li>
             <li class="font-normal short"><a href="#">ナイトダイビング</a></li>
             <li class="star large"><a href="#">私たちについて</a></li>
             <li class="star"><a href="#">ダイビング情報</a></li>
-            <li class="font-normal short"><a href="#">ライセンス講習</a></li>
+            <!-- <li class="font-normal short"><a href="#">ライセンス講習</a></li>
             <li class="font-normal short"><a href="#">体験ダイビング</a></li>
-            <li class="font-normal short"><a href="#">ファンダイビング</a></li>
-            <li class="star large"><a href="#">ブログ</a></li>
+            <li class="font-normal short"><a href="#">ファンダイビング</a></li> -->
+            <!-- <li class="star large"><a href="#">ブログ</a></li> -->
           </ul>
           <ul>
             <li class="star"><a href="#">お客様の声</a></li>
@@ -724,9 +730,7 @@
             <li class="font-normal short"><a href="#">体験ダイビング</a></li>
             <li class="font-normal short"><a href="#">ファンダイビング</a></li>
             <li class="star"><a href="#">よくある質問</a></li>
-            <li class="star large">
-              <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
-            </li>
+            <li class="star large"><a href="#">プライバシー<br class="u-mobile" />ポリシー</a></li>
             <li class="star large"><a href="#">利用規約</a></li>
             <li class="star large"><a href="#">お問い合わせ</a></li>
           </ul>

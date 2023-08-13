@@ -1,13 +1,16 @@
 @use "global" as *;
 
 .information {
+  padding-bottom: rem(5);
   @include mq(md) {
     padding-bottom: rem(81.2);
   }
 }
 
 .information__image {
+  padding-top: rem(5);
   @include mq(md) {
+    padding-top: 0;
     width: rem(540);
     height: rem(356);
   }

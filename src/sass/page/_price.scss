@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .price {
-  padding-bottom: rem(80);
   @include mq(md) {
     position: relative;
     margin-top: rem(142);
@@ -15,6 +14,10 @@
     flex-direction: row-reverse;
     justify-content: center;
   }
+}
+
+.price__sp-image {
+  padding-top: rem(8);
 }
 
 .price__pc-image {

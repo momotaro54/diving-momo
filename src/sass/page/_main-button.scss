@@ -7,6 +7,14 @@
     padding-top: rem(80);
   }
 }
+
+.main-button__wrapper-sp {
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}
+
 .main-button__wrapper--top {
   text-align: center;
   padding-top: rem(40);

@@ -13,55 +13,57 @@ jQuery(function ($) {
         $("#js-global-menu").attr("aria-hidden", "true");
       }
     });
-    //背景の黒ボックスクリックでもドロワーが消えるようにする
-    $("#js-drawer-background").click(function () {
-      $("body").removeClass("is-drawerActive");
-      $("#js-hamburger").attr("aria-expanded", "false");
-      $("#js-global-menu").attr("aria-hidden", "true");
-    });
+    // 背景の黒ボックスクリックでもドロワーが消えるようにする
+    // $("#js-drawer-background").click(function () {
+    //   $("body").removeClass("is-drawerActive");
+    //   $("#js-hamburger").attr("aria-expanded", "false");
+    //   $("#js-global-menu").attr("aria-hidden", "true");
+    // });
   });
 
-  const fvSwiper = new Swiper(".js-fv-swiper", {
-    loop: true,
-    slidesPerView: "1",
-    speed: 4000,
+  // const fvSwiper = new Swiper(".js-fv-swiper", {
+  //   loop: true,
+  //   slidesPerView: "1",
+  //   speed: 4000,
 
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-  });
+  //   autoplay: {
+  //     delay: 0,
+  //     disableOnInteraction: false,
+  //   },
+  // });
 
-  const campaignSwiper = new Swiper(".js-campaign-swiper", {
-    loop: false,
-    spaceBetween: 24,
-    slidesPerView: "1",
-    speed: 3000,
-    loopAdditionalSlides: 2,
-    width: 280,
+  // const campaignSwiper = new Swiper(".js-campaign-swiper", {
+  //   loop: false,
+  //   initialSlide: 3.5,
+  //   // centeredSlides: true,
+  //   spaceBetween: 24,
+  //   slidesPerView: "1",
+  //   speed: 3000,
+  //   loopAdditionalSlides: 2,
+  //   width: 280,
 
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: "3.5",
-        spaceBetween: 40,
-        width: 1265.5,
-      },
-      1920: {
-        slidesPerView: "5",
-        spaceBetween: 40,
-        width: 1825,
-      },
-    },
+  //   autoplay: {
+  //     delay: 0,
+  //     disableOnInteraction: false,
+  //   },
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: "3.5",
+  //       spaceBetween: 40,
+  //       width: 1265.5,
+  //     },
+  //     1920: {
+  //       slidesPerView: "5",
+  //       spaceBetween: 40,
+  //       width: 1825,
+  //     },
+  //   },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  // });
 
   var box = $(".colorbox"),
     speed = 700;
