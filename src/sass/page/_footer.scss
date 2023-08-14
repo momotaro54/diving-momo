@@ -146,7 +146,7 @@
 .footer__sp-nav-lists--font-normal-right,
 .footer__pc-nav-lists--font-normal-right {
   font-weight: $normal;
-  margin-left: rem(20);
+  padding-left: rem(20);
   @include mq(md) {
     margin-left: rem(40);
   }

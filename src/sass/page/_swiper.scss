@@ -1,12 +1,12 @@
 @use "global" as *;
 
-。.swiper-container {
-  width: 100%;
-}
-
 .slide-wrapper {
   transition-timing-function: linear;
-  padding: rem(2);
+  // padding: rem(2);
+}
+
+.swiper-slide {
+  position: relative;
 }
 
 .swiper__button-circle {
@@ -34,20 +34,6 @@
   border-bottom: 1px solid $green-accent;
   border-right: 1px solid $green-accent;
   transform: skew(45deg);
-}
-
-.swiper-container {
-  margin-inline: auto;
-  position: relative;
-}
-.swiper-slide {
-  width: 100%;
-  max-width: 100%;
-}
-
-.swiper-slide img {
-  height: auto;
-  width: 100%;
 }
 
 .swiper-container [class^="swiper-button-"]::after {

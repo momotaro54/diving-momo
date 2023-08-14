@@ -63,27 +63,23 @@
 
 .drawer-background {
   // position: fixed;
-  // z-index: -1;
   width: 100%;
-  // max-width: rem(425);
   top: 0;
   right: 0;
   bottom: 0;
-
-  // overflow: hidden;
-  // height: rem(667);
   background-color: $green-accent;
   color: $white;
   visibility: hidden;
-  // opacity: 1;
+  opacity: 0;
 }
 
 .is-drawerActive .header__sp-nav {
+  opacity: 1;
   transform: translateX(0px);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .is-drawerActive .drawer-background {
   visibility: visible;
-  opacity: 0;
-  transition: 0.3s;
+  opacity: 1;
+  transition: 0.5s;
 }
