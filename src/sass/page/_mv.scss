@@ -67,4 +67,9 @@
   font-family: $font-family;
   margin-left: rem(52);
   font-size: rem(20);
+  @include mq(md) {
+    text-align: center;
+    margin-left: rem(7);
+    
+  }
 }

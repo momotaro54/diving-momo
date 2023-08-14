@@ -1,6 +1,6 @@
 @use "global" as *;
 
-@if $startFrom == sp {
+@if $footer__nav-lists--startFrom == sp {
   .inner {
     width: 100%;
     padding-right: $padding-sp;

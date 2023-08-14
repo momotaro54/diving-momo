@@ -1,7 +1,7 @@
 /* リキッドレイアウト対応 */
 @use "global" as *;
 
-@if $startFrom == sp {
+@if $footer__nav-lists--startFrom == sp {
   //スマホファースト
   html {
     //~375px

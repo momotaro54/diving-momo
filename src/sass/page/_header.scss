@@ -40,6 +40,7 @@
 .header__sp-nav {
   position: fixed;
   // z-index: 4;
+  width: rem(375);
   width: 100%;
   // max-width: rem(425);
   top: 0;
@@ -64,6 +65,7 @@
 
 .header__sp-nav-lists {
   display: flex;
+  // flex-direction: column;
   align-items: flex-start;
   font-family: $base-font-family;
   color: $white;
@@ -71,39 +73,80 @@
   font-weight: $bold;
   line-height: 1.125;
   padding-top: rem(45);
+  width: 100%;
+  // column-count: 2;
 }
 
 .header__sp-nav-lists li {
+  // width: 100%;
   align-items: center;
-  white-space: nowrap;
+  // white-space: nowrap;
   // margin-bottom: rem(24);
 }
 
-.header__sp-nav-lists li.star::before {
+.header__sp-nav-lists li:hover {
+  opacity: 0.8;
+}
+
+.header__sp-nav-lists--star::before {
   content: "";
   display: inline-block;
   width: rem(18);
   height: rem(18);
   background: url(../images/common/starfish.png) no-repeat;
   background-size: contain;
-  vertical-align: middle;
-  margin-right: rem(8);
+  margin-right: rem(4);
   margin-left: rem(15);
+  vertical-align: text-bottom;
   // margin-bottom: rem(40);
 }
-
-.small {
-  margin-bottom: rem(24);
+.header__sp-nav-lists--star-right::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  margin-right: rem(4);
+  vertical-align: text-bottom;
 }
 
-.big {
-  margin-bottom: rem(40);
+.header__sp-nav-lists--star-right-top {
+  position: relative;
 }
 
-.font-normal {
+.header__sp-nav-lists--star-right-top::before {
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/starfish.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: rem(42);
+  left: 0;
+  margin-right: rem(4);
+}
+
+.header__sp-nav-lists--top {
+  padding-top: rem(24);
+}
+.header__sp-nav-lists--large {
+  padding-top: rem(40);
+}
+
+.header__sp-nav-lists--font-normal {
   font-weight: $normal;
   margin-left: rem(40);
-  padding-bottom: rem(24);
+}
+
+.header__sp-nav-lists--font-normal-right {
+  font-weight: $normal;
+  margin-left: rem(20);
+}
+
+.header__sp-nav-lists--privacy {
+  padding-left: rem(24);
 }
 
 .header__pc-nav ul {
