@@ -173,3 +173,15 @@
     padding-bottom: rem(80);
   }
 }
+
+// _:lang(x)::-moz-placeholder, body {
+//   .footer__pc-nav-lists--font-normal-right {
+//     margin-left: 0;
+//   }
+// }
+
+@-moz-document url-prefix() {
+  .footer__pc-nav-lists--font-normal-right {
+    margin-left: 0;
+  }
+}
