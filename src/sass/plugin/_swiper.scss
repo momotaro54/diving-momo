@@ -6,8 +6,10 @@
   max-width: 100%;
   overflow: hidden;
 }
+
 .slide-wrapper {
   transition-timing-function: linear;
+  padding: rem(2);
 }
 
 .swiper__button-circle {
@@ -47,27 +49,28 @@
 }
 
 .swiper-container .swiper-button-prev {
-  top: rem(-82);
-  left: rem(995);
+  position: absolute;
+  top: rem(32);
+  left: rem(740);
+  @include mq(lg) {
+    top: rem(32);
+    left: rem(770);
+  }
+  @include mq(xl) {
+    top: rem(22);
+    left: rem(995);
+  }
 }
 .swiper-container .swiper-button-next {
-  top: rem(-85);
-  right: rem(156);
-}
-
-.js-campaign-swiper {
-  position: relative;
-
-}
-
-.swiper-button-prev {
   position: absolute;
-  top: rem(-92);
-  left: 0;
-
-}
-
-.swiper-button-next {
-  position: absolute;
-
+  top: rem(32);
+  right: rem(86);
+  @include mq(lg) {
+    top: rem(32);
+    right: rem(100);
+  }
+  @include mq(xl) {
+    top: rem(22);
+    right: rem(156);
+  }
 }

@@ -15,7 +15,6 @@
 }
 
 .about__image-fish {
-  // padding-top: rem(16);
   width: rem(281);
   height: rem(186);
   margin-left: auto;
@@ -34,7 +33,6 @@
     top: rem(203);
     left: rem(181);
   }
-
 }
 
 .about__pc {
@@ -58,15 +56,11 @@
     padding-top: rem(120);
   }
 }
+
 .about__pc-flex {
   @include mq(md) {
     display: flex;
   }
-}
-
-.about__pc-flex--right {
-  // margin-left: 0;
-
 }
 
 .about__title {
@@ -106,5 +100,4 @@
   height: rem(181);
   right: rem(86.5);
   bottom: rem(-90);
-  
 }

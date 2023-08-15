@@ -2,13 +2,8 @@
 
 .hamburger {
   position: relative;
-  // position: fixed;
-  // padding-left: rem(211);
-  // position: absolute;
-  // top: 0;
   right: rem(15);
   top: rem(29);
-  // left: rem(328);
   z-index: 5;
   width: rem(32);
   height: rem(24);
@@ -67,7 +62,6 @@
 }
 
 .drawer-background {
-  // position: fixed;
   width: 100%;
   top: 0;
   right: 0;

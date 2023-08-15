@@ -29,15 +29,6 @@
   }
 }
 
-// .blog__cards {
-//   margin-top: rem(5);
-//   @include mq(md){
-//     margin-top: rem(56);
-//     display: flex;
-//     gap: rem(30);
-//   }
-// }
-
 .blog__card {
   width: rem(333);
   height: rem(447);
@@ -47,16 +38,6 @@
   background-color: $white;
   transition: background-color 0.3s;
 }
-
-// .blog__card + .blog__card {
-//   margin-top: rem(40);
-//   @include mq(md){
-//     margin-top: 0;
-//   }
-// }
-// .blog__card:nth-child(n + 2) {
-//     margin-top: rem(40);
-//   }
 
 .blog__card:hover {
   @include mq(md) {

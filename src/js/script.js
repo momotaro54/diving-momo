@@ -24,7 +24,6 @@ jQuery(function ($) {
     loop: true,
     slidesPerView: "1",
     speed: 4000,
-
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
