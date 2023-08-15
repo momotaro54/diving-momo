@@ -16,6 +16,33 @@
   }
 }
 
+.information {
+  position: relative;
+}
+
+.information__image {
+  position: relative;
+}
+
+.information__image::before {
+  content: "";
+  display: block;
+  padding-top: 65.797%;
+  @include mq(md) {
+    padding-top: 65.925%;
+  }
+}
+
+.information__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .information__pc-info {
   @include mq(md) {
     padding-top: rem(60);
@@ -44,8 +71,8 @@
   content: "";
   display: block;
   width: 100%;
-  height: rem(1); 
-  background-color: $green-accent; 
+  height: rem(1);
+  background-color: $green-accent;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -61,7 +88,6 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
-
   @include mq(md) {
     color: #000;
     width: rem(492);
@@ -72,6 +98,5 @@
   @include mq(md) {
     display: flex;
     justify-content: center;
-    // padding-bottom: rem(80);
   }
 }

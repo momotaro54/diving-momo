@@ -13,7 +13,6 @@ jQuery(function ($) {
         $("#js-global-menu").attr("aria-hidden", "true");
       }
     });
-    背景の黒ボックスクリックでもドロワーが消えるようにする
     $("#js-drawer-background").click(function () {
       $("body").removeClass("is-drawerActive");
       $("#js-hamburger").attr("aria-expanded", "false");
@@ -35,7 +34,6 @@ jQuery(function ($) {
   const campaignSwiper = new Swiper(".js-campaign-swiper", {
     loop: false,
     initialSlide: 3.5,
-    // centeredSlides: true,
     spaceBetween: 24,
     slidesPerView: "1",
     speed: 3000,

@@ -24,7 +24,8 @@
     width: rem(1080);
     height: rem(415);
     justify-content: center;
-    padding: rem(69) 0 rem(90) 0;
+    padding-top: rem(69);
+    padding-bottom: rem(90);
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     background-color: $white;
   }
@@ -105,7 +106,6 @@
     display: flex;
     justify-content: center;
     margin-top: rem(32);
-    gap: rem(21);
   }
 }
 
@@ -131,16 +131,21 @@
 
 .contact__text p:not(:first-child) {
   margin-top: rem(5);
+}
+
+.contact__map {
+  padding: 0 rem(25);
   @include mq(md) {
+    padding-left: rem(10);
   }
 }
 
 .contact__map iframe {
-  width: rem(295);
-  height: rem(160);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 295 / 160;
   @include mq(md) {
-    width: rem(273);
-    height: rem(148);
+    aspect-ratio: 273 / 148;
   }
 }
 

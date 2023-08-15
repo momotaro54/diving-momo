@@ -5,15 +5,21 @@
   z-index: 9999;
   height: rem(80);
   width: 100%;
+  max-width: 100%;
   background: rgba(13, 41, 54, 0.68);
-  display: flex;
   @include mq(md) {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
     height: rem(90);
     justify-content: space-between;
   }
+}
+
+.header__inner-flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -62,7 +68,8 @@
   width: 100%;
 }
 
-.header__sp-nav-lists li {
+.header__sp-nav-lists li a {
+  display: inline-block;
   align-items: center;
 }
 
@@ -70,7 +77,7 @@
   opacity: 0.8;
 }
 
-.header__sp-nav-lists--star::before {
+.header__sp-nav-lists--star a::before {
   content: "";
   display: inline-block;
   width: rem(18);
@@ -81,7 +88,7 @@
   margin-left: rem(15);
   vertical-align: text-bottom;
 }
-.header__sp-nav-lists--star-right::before {
+.header__sp-nav-lists--star-right a::before {
   content: "";
   display: inline-block;
   width: rem(18);
@@ -92,11 +99,11 @@
   vertical-align: text-bottom;
 }
 
-.header__sp-nav-lists--star-right-top {
+.header__sp-nav-lists--star-right-top a {
   position: relative;
 }
 
-.header__sp-nav-lists--star-right-top::before {
+.header__sp-nav-lists--star-right-top a::before {
   content: "";
   display: inline-block;
   width: rem(18);
@@ -104,8 +111,8 @@
   background: url(../images/common/starfish.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: rem(42);
-  left: 0;
+  top: rem(2);
+  left: rem(-24);
   margin-right: rem(4);
 }
 
@@ -140,22 +147,38 @@
   align-items: center;
   color: $white;
   height: rem(90);
-  padding-right: rem(40);
+  @include mq(md) {
+    padding-right: rem(20);
+  }
+  @include mq(xl) {
+    padding-right: rem(40);
+  }
 }
 
 .header__pc-nav-eng-title {
-  font-size: rem(18);
   font-family: $font-family;
   font-weight: $normal;
   line-height: 1;
   padding-top: rem(26);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+  @include mq(xl) {
+    font-size: rem(18);
+  }
 }
 
 .header__pc-nav-title {
-  font-size: rem(10);
   font-family: $base-font-family;
   font-weight: $normal;
-  line-height: 1.5;
+  @include mq(md) {
+    font-size: rem(6);
+    line-height: 1;
+  }
+  @include mq(xl) {
+    font-size: rem(10);
+    line-height: 1.5;
+  }
 }
 
 .header__pc-nav li a,

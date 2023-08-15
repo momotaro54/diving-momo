@@ -23,9 +23,34 @@
 .price__pc-image {
   margin-left: rem(90);
 }
+
 .price__pc-image img {
   width: rem(492);
   height: rem(746);
+}
+
+.price {
+  position: relative;
+}
+
+.price__sp-image {
+  position: relative;
+}
+
+.price__sp-image::before {
+  content: "";
+  display: block;
+  padding-top: 65.797%;
+}
+
+.price__sp-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .price__list {

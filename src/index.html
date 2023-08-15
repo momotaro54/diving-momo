@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./assets/js/jquery.inview.min.js"></script>
 
@@ -41,19 +42,22 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <div class="header__logo">
-          <img src="assets/images/common/logo-white.png" alt="" />
+        <div class="header__inner-flex">
+          <div class="header__logo">
+            <img src="assets/images/common/logo-white.png" alt="" />
+          </div>
+          <button
+            type="button"
+            id="js-hamburger"
+            class="hamburger-button hamburger"
+            aria-controls="js-global-menu"
+            aria-expanded="false"
+            aria-label="メニューを開閉する"
+          >
+            <span class="hamburger__line"></span>
+          </button>
         </div>
-        <button
-          type="button"
-          id="js-hamburger"
-          class="hamburger-button hamburger"
-          aria-controls="js-global-menu"
-          aria-expanded="false"
-          aria-label="メニューを開閉する"
-        >
-          <span class="hamburger__line"></span>
-        </button>
+
         <div class="header__pc-nav u-desktop">
           <ul>
             <li>
@@ -217,47 +221,85 @@
         <p class="mv__subtitle">into the ocean</p>
       </div>
       <div class="u-mobile">
-        <div class="js-fv-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="mv__image">
-                <img src="assets/images/common/mv-sp.jpeg" alt="" />
+        <div class="swiper-container">
+          <div class="js-fv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="mv__image">
+                  <img src="assets/images/common/mv-sp.jpeg" alt="" />
+                </div>
               </div>
-            </div>
 
-            <div class="swiper-slide">
-              <div class="fv__image">
-                <img src="assets/images/common/fv-sp01.jpeg" alt="" />
+              <div class="swiper-slide">
+                <div class="fv__image">
+                  <img src="assets/images/common/fv-sp01.jpeg" alt="" />
+                </div>
               </div>
-            </div>
 
-            <div class="swiper-slide">
-              <div class="fv__image">
-                <img src="assets/images/common/fv-sp02.jpeg" alt="" />
+              <div class="swiper-slide">
+                <div class="fv__image">
+                  <img src="assets/images/common/fv-sp02.jpeg" alt="" />
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="fv__image">
-                <img src="assets/images/common/fv-sp03.jpeg" alt="" />
+              <div class="swiper-slide">
+                <div class="fv__image">
+                  <img src="assets/images/common/fv-sp03.jpeg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mv__image">
+                  <img src="assets/images/common/mv-sp.jpeg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="fv__image">
+                  <img src="assets/images/common/fv-sp01.jpeg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="fv__image">
+                  <img src="assets/images/common/fv-sp02.jpeg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="fv__image">
+                  <img src="assets/images/common/fv-sp03.jpeg" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="u-desktop">
-        <div class="js-fv-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="assets/images/common/mv-pc.jpeg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/images/common/fv-pc01.jpeg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/images/common/fv-pc02.jpeg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/images/common/fv-pc03.jpeg" alt="" />
+        <div class="swiper-container">
+          <div class="js-fv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/common/mv-pc.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/fv-pc01.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/fv-pc02.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/fv-pc03.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/mv-pc.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/fv-pc01.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/fv-pc02.jpeg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/common/fv-pc03.jpeg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -273,11 +315,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img
-                      src="assets/images/common/campaign-license.jpeg"
-                      alt=""
-                    />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-license.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">ライセンス講習</h3>
                   <div class="campaign__title">ライセンス取得</div>
@@ -292,11 +336,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img
-                      src="assets/images/common/campaign-diving.jpeg"
-                      alt=""
-                    />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-diving.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">体験ダイビング</h3>
                   <div class="campaign__title">貸切体験ダイビング</div>
@@ -311,11 +357,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img
-                      src="assets/images/common/campaign-night.jpeg"
-                      alt=""
-                    />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-night.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">体験ダイビング</h3>
                   <div class="campaign__title">ナイトダイビング</div>
@@ -330,8 +378,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img src="assets/images/common/campaign-fun.jpeg" alt="" />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-fun.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">ファンダイビング</h3>
                   <div class="campaign__title">ファンダイビング</div>
@@ -346,11 +399,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img
-                      src="assets/images/common/campaign-license.jpeg"
-                      alt=""
-                    />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-license.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">ライセンス講習</h3>
                   <div class="campaign__title">ライセンス取得</div>
@@ -365,11 +420,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img
-                      src="assets/images/common/campaign-diving.jpeg"
-                      alt=""
-                    />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-diving.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">体験ダイビング</h3>
                   <div class="campaign__title">貸切体験ダイビング</div>
@@ -384,11 +441,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img
-                      src="assets/images/common/campaign-night.jpeg"
-                      alt=""
-                    />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-night.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">体験ダイビング</h3>
                   <div class="campaign__title">ナイトダイビング</div>
@@ -403,8 +462,13 @@
             <div class="swiper-slide">
               <div class="slide-wrapper">
                 <div class="campaign__card">
-                  <div class="campaign__image">
-                    <img src="assets/images/common/campaign-fun.jpeg" alt="" />
+                  <div class="campaign__images">
+                    <div class="campaign__image">
+                      <img
+                        src="assets/images/common/campaign-fun.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <h3 class="campaign__category">ファンダイビング</h3>
                   <div class="campaign__title">ファンダイビング</div>
@@ -732,12 +796,9 @@
                   <p>定休日:毎週火曜日</p>
                 </div>
               </div>
-
               <div class="contact__map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.020145121927!2d135.17933852581598!3d34.67944103435317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008f0747cb34bb%3A0x15975b3e7629094c!2z56We5oi444OP44O844OQ44O844Op44Oz44OJdW1pZQ!5e0!3m2!1sja!2sjp!4v1691553687099!5m2!1sja!2sjp"
-                  width="600"
-                  height="450"
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
